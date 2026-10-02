@@ -353,8 +353,8 @@
         // ================================================================
         // SECTION 3: DATABASE LAYER (Offline + Online Sync Ready)
         // ================================================================
-        const STORE_KEY = 'rork_power_complete_v2';
-        const SYNC_KEY = 'rork_power_sync_queue';
+        const STORE_KEY = 'rock_power_complete_v2';
+        const SYNC_KEY = 'rock_power_sync_queue';
 
         function seedData() {
             const now = Date.now();
@@ -366,11 +366,11 @@
                 appLogo: null,
                 socialLinks: { whatsapp: '', facebook: '', twitter: '', instagram: '', email: '', phone: '' },
                 shops: [
-                    { id: 'shop1', name: 'Rork Power', ownerName: 'Store Owner', adminContact: '+256772000001', status: 'active',
+                    { id: 'shop1', name: 'Rock Power', ownerName: 'Store Owner', adminContact: '+256772000001', status: 'active',
                         createdAt: now }
                 ],
                 users: [
-                    { id: 'dev_001', username: 'superadmin', password: 'RorkPower2025!@#', name: 'System Developer',
+                    { id: 'dev_001', username: 'superadmin', password: 'RockPower2025!@#', name: 'System Developer',
                         role: 'super_admin', phone: '+256700000000', avatar: null, createdAt: now },
                     { id: 'u1', shopId: 'shop1', username: 'owner', password: 'owner123', name: 'Store Owner',
                         role: 'owner', phone: '+256772000001', avatar: null, createdAt: now }
@@ -531,14 +531,14 @@
         // ================================================================
         function getSession() {
             if (session) return session;
-            try { session = JSON.parse(localStorage.getItem('rork_session')); return session; } catch { return null; }
+            try { session = JSON.parse(localStorage.getItem('rock_session')); return session; } catch { return null; }
         }
 
         function setSession(data) { session = data;
-            localStorage.setItem('rork_session', JSON.stringify(data)); }
+            localStorage.setItem('rock_session', JSON.stringify(data)); }
 
         function clearSession() { session = null;
-            localStorage.removeItem('rork_session'); }
+            localStorage.removeItem('rock_session'); }
 
         function getEffectiveShopId() {
             const s = getSession();
